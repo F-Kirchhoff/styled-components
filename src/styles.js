@@ -1,3 +1,6 @@
+import { createGlobalStyle } from "styled-components";
+
+export default createGlobalStyle`
 :root {
   --primary-color: rgb(255, 102, 0);
   --secondary-color: rgb(214, 222, 228);
@@ -22,3 +25,5 @@ main {
   display: grid;
   place-items: center;
 }
+
+`;
