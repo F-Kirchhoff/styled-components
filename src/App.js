@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Button from "./components/Button";
 import Container from "./components/Container";
 import InfoBox from "./components/InfoBox";
@@ -5,25 +6,27 @@ import InfoBox from "./components/InfoBox";
 function App() {
   return (
     <main>
-      <Container direction={"column"}>
-        <Button color="danger">Click me!</Button>
-        <Button>Click me!</Button>
+      <Container direction="row" bgColor="red">
+        <Button color="danger">Click Me!</Button>
+        <Button>Click Me!</Button>
+        <Button>Click Me!</Button>
       </Container>
-      <Container>
-        <Button>Click me!</Button>
-        <Button>Click me!</Button>
-        <Button>Click me!</Button>
+      <Container direction="column" bgColor="rgb(0 0 0 / 0.3)">
+        <Button>Click Me!</Button>
+        <Button>Click Me!</Button>
+        <Button>Click Me!</Button>
       </Container>
       <InfoBox
-        variant="success"
-        title="This is an Info"
-        message="Read it carefully."
+        title="An important Info"
+        message="You should read this!"
+        variant={"success"}
       />
       <InfoBox
+        title="An important Info"
+        message="You should read this!"
         variant="error"
-        title="Error"
-        message="Something went horribly wrong D:"
       />
+      <InfoBox title="An important Info" message="You should read this!" />
     </main>
   );
 }
